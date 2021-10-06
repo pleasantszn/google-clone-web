@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Google</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="clearfix">
+
+        <ul class="right">
+          <li><a href="#">Gmail</a></li>
+          <li><a href="#">Images</a></li>
+          <li class="menu"><a href="#">Menu</a></li>
+          <li class="notifications"><a href="#">Notifications</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <img class="logo" src="./images/logo.png" alt="Google Logo">
+
+      <form onsubmit="send()">
+        <div class="input">
+          <input type="text" id = "search-input"><!--
+          --><img class="voice" src="./images/mic.png" alt="Search By Voice">
+        </div>
+        <div class="buttons">
+          <button>Google Search</button>
+          <button>I'm Feeling Lucky</button>
+        </div>
+      </form>
+
+      <p class="language">Google offered in: <a href="#">English</a></p>
+    </main>
+
+    <footer>
+      <p class="location">Nigeria</p>
+      <nav class="clearfix">
+        <ul class="left">
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Business</a></li>
+        </ul>
+
+        <ul class="right">
+          <li><a href="#">Privary</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+    </footer>
+    
+    <script type="text/javascript" charset="utf-8">
+      let input = document.querySelector("#search-input")
+      function send(){
+        window.location = `https://www.google.com/search?q=${input}`
+      }
+      
+      console.log(input.value)
+    </script>
+  </body>
+</html>
