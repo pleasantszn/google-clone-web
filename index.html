@@ -24,7 +24,7 @@
     <main>
       <img class="logo" src="./images/logo.png" alt="Google Logo">
 
-      <form onsubmit="send()">
+      <form onsubmit="send(event)">
         <div class="input">
           <input type="text" id = "search-input"><!--
           --><img class="voice" src="./images/mic.png" alt="Search By Voice">
@@ -56,8 +56,10 @@
     
     <script type="text/javascript" charset="utf-8">
       let input = document.querySelector("#search-input")
-      function send(){
-        window.location = `https://www.google.com/search?q=${input}`
+      function send(event){
+        event.preventDefault()
+        let query = input.value
+        window.location.href = `https://www.google.com/search?q=${query}`
       }
       
       console.log(input.value)
